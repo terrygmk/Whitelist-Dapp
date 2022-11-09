@@ -16,6 +16,6 @@ contract Whitelist {
         require(!whitelistedAddress[msg.sender], "Sender has already already whitelisted");
         require(numAddressesWhitelisted < maxWhitelistedAddresses, "Max number of addresses already whitelisted");
         whitelistedAddress[msg.sender] = true;
-        maxWhitelistedAddresses += 1;
+        numAddressesWhitelisted += 1;
     }
 }
